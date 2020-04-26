@@ -1,4 +1,4 @@
-package javaPractice.operator;
+package operator;
 
 public class Run {
 	public static void main(String[] args) {
