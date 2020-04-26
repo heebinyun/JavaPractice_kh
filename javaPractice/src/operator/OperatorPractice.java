@@ -35,4 +35,23 @@ public class OperatorPractice {
 		System.out.println("1인당 사탕 개수 : " + (num2/num1));
 		System.out.println("남는 사탕 개수 : " + (num2%num1));
 	}
+	
+	public void practice8() {
+		System.out.print("주민번호를 입력하세요(- 포함) : ");
+		char input = sc.nextLine().charAt(7);
+		String result = (input == '2') ? "여자" : "남자";
+		System.out.println(result);
+	}
+	
+	public void practice9() {
+		System.out.print("정수1 : ");
+		int num1 = sc.nextInt();
+		System.out.print("정수2 : ");
+		int num2 = sc.nextInt();
+		System.out.print("입력 : ");
+		int input = sc.nextInt();
+		
+		Boolean result = input <= num1 || input>num2;
+		System.out.println(result);
+	}
 }
