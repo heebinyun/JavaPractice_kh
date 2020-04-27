@@ -107,9 +107,8 @@ public class LoopPractice2 {
 		System.out.print("숫자 : ");
 		int num = sc.nextInt();
 		boolean isTrue = true;
-		if(num<2) {
-			System.out.println("잘못 입력하셨습니다.");
-		}else {
+		if(num<2) System.out.println("잘못 입력하셨습니다.");
+		else {
 			for(int i=2; i<num; i++) {
 				if(num%i == 0) {
 					isTrue = false;
@@ -149,9 +148,8 @@ public class LoopPractice2 {
 		int num = sc.nextInt();
 		boolean isTrue = true;
 		int count = 0;
-		if(num<2) {
-			System.out.println("잘못 입력하셨습니다.");
-		}else {
+		if(num<2) System.out.println("잘못 입력하셨습니다.");
+		else {
 			for(int i=2; i<=num; i++) {
 				isTrue = true;
 				for(int j=2; j<i; j++) {
