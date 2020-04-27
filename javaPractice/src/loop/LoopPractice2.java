@@ -110,17 +110,15 @@ public class LoopPractice2 {
 		if(num<2) {
 			System.out.println("잘못 입력하셨습니다.");
 		}else {
-			while(isTrue) {
-				for(int i=2; i<num; i++) {
-					if(num%i == 0) {
-						isTrue = false;
-						System.out.println("소수가 아닙니다.");
-						break;
-					}
+			for(int i=2; i<num; i++) {
+				if(num%i == 0) {
+					isTrue = false;
+					System.out.println("소수가 아닙니다.");
+					break;
 				}
-				if(isTrue) System.out.println("소수입니다.");
-				isTrue=false;
 			}
+			if(isTrue) System.out.println("소수입니다.");
+			isTrue=false;
 		}
 	}
 	
@@ -156,18 +154,16 @@ public class LoopPractice2 {
 		}else {
 			for(int i=2; i<=num; i++) {
 				isTrue = true;
-				while(isTrue) {
-					for(int j=2; j<i; j++) {
-						if(i%j==0) {
-							isTrue = false;
-							break;
-						}
-					}
-					if(isTrue) {
-						System.out.print(i +" ");
-						count ++;
+				for(int j=2; j<i; j++) {
+					if(i%j==0) {
 						isTrue = false;
+						break;
 					}
+				}
+				if(isTrue) {
+					System.out.print(i +" ");
+					count ++;
+					isTrue = false;
 				}
 			}
 			System.out.println();
