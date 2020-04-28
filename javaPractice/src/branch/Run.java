@@ -10,6 +10,6 @@ public class Run {
 		//bp.practice3();
 		//bp.practice4();
 		//bp.practice5();
-		bp.practice6();
+		//bp.practice6();
 	}
 }

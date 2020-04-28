@@ -3,6 +3,7 @@ package branch;
 import java.util.Scanner;
 
 public class BranchPractice {
+	
 	Scanner sc = new Scanner(System.in);
 
 	public void practice1() {
