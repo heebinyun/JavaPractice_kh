@@ -7,8 +7,8 @@ public class Computer extends Electronic{
 	
 	public Computer() {	}
 
-	public Computer(String cpu, String graphic) {
-		super();
+	public Computer(String brand, String name, int price, String cpu, String graphic) {
+		super(brand, name, price);
 		this.cpu = cpu;
 		this.graphic = graphic;
 	}

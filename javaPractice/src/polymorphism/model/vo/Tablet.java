@@ -5,9 +5,9 @@ public class Tablet extends Electronic{
 	private boolean penFlag;
 	
 	public Tablet() {	}
-
-	public Tablet(boolean penFlag) {
-		super();
+	
+	public Tablet(String brand, String name, int price, boolean penFlag) {
+		super(brand, name, price);
 		this.penFlag = penFlag;
 	}
 
