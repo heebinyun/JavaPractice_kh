@@ -1,5 +1,6 @@
 package map.bingo.view;
 
+import java.util.Map;
 import java.util.Scanner;
 
 import map.bingo.controller.BingoController;
@@ -42,5 +43,13 @@ public class BingoMenu {
 		
 		// 빙고판 생성
 		bc.setBingo(bingoSize, goal);
+		
+		// 빙고판 출력
+		printBingo(bc.getBingo());
+	}
+	
+	// 빙고판 출력 메소드
+	private void printBingo(Map<String, String> bingoBoard) {
+		
 	}
 }
