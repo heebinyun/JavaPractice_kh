@@ -51,5 +51,14 @@ public class BingoMenu {
 	// 빙고판 출력 메소드
 	private void printBingo(Map<String, String> bingoBoard) {
 		
+		int i=1;
+		System.out.println();
+		for(String s : bingoBoard.keySet()) {
+			System.out.printf("%4s", bingoBoard.get(s));
+			if(i % Math.sqrt(bingoBoard.size()) == 0) {
+				System.out.println();
+			}
+			i++;
+		}
 	}
 }
