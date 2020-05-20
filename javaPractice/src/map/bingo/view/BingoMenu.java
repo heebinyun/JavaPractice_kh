@@ -46,6 +46,10 @@ public class BingoMenu {
 		
 		// 빙고판 출력
 		printBingo(bc.getBingo());
+		
+		
+		// 게임 시작 메소드 출력
+		startGame();
 	}
 	
 	// 빙고판 출력 메소드
@@ -59,6 +63,22 @@ public class BingoMenu {
 				System.out.println();
 			}
 			i++;
+		}
+	}
+	
+	// 게임 시작 메소드
+	private void startGame() {
+		String input = null;
+		
+		while(true) {
+			System.out.println();
+			System.out.print("숫자를 입력하세요 : ");
+			input = sc.nextLine();
+			
+			// 입력 받은 값에 해당 하는 부분을 "X"로 변경하고 빙고 개수 반환 받기
+			int bingoCount = bc.checkBingo(input);
+			for(int i=0; i<10; i++) System.out.println(); // 이전 빙고와 체크된 빙고 사이 공간 띄우기
+			printBingo(bc.getBingo());
 		}
 	}
 }

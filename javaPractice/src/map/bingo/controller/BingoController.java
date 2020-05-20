@@ -40,4 +40,16 @@ public class BingoController {
 			}
 		}
 	}
+	
+	// 빙고판에 입력된 값을 체크
+	// 성립된 빙고 개수 반환
+	public int checkBingo(String input) {
+		
+		// 입력된 값이 빙고판에 있을 경우 "X"로 변경
+		if(bingoBoard.containsKey(input)) {
+			bingoBoard.replace(input, "X");
+		}
+		
+		return 0;
+	}
 }
