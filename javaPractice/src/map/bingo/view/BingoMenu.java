@@ -79,6 +79,16 @@ public class BingoMenu {
 			int bingoCount = bc.checkBingo(input);
 			for(int i=0; i<10; i++) System.out.println(); // 이전 빙고와 체크된 빙고 사이 공간 띄우기
 			printBingo(bc.getBingo());
+			
+			// 빙고 개수 출력
+			System.out.println();
+			System.out.println("현재 빙고 수 : " + bingoCount);
+			
+			// 빙고 개수와 승리 목표의 개수가 같으면 "Bingo!" 문구를 띄우고 메인으로 이동
+			if(bingoCount == BingoController.goal) {
+				System.out.println("Bingo!");
+				break;
+			}
 		}
 	}
 }

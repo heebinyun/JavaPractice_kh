@@ -1,6 +1,8 @@
 package map.bingo.controller;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public class BingoController {
@@ -50,6 +52,27 @@ public class BingoController {
 			bingoBoard.replace(input, "X");
 		}
 		
-		return 0;
+		// Map에 저장된 value 값들만을 ArrayList 객체로 변환
+		List<String> list = new ArrayList<String>(bingoBoard.values());
+		
+		boolean rowCheck = true; // 가로 빙고 여부 판단
+		boolean colCheck = true; // 세로 빙고 여부 판단
+		int bingoCount = 0;
+		
+		boolean diaCheck1 = true; // 좌상 우하(\) 대각선 빙고 여부 판단
+		boolean diaCheck2 = true; // 우상 좌하(/) 대각선 빙고 여부 판단
+		
+		for(int i=0; i<bingoSize; i++) {
+			// 가로 빙고 체크
+			rowCheck = true;
+			for(int j=i*bingoSize; j<(i+1)*bingoSize; j++) {
+				if(!list.get(j).equals("X")) {
+					rowCheck = false;
+					break;
+				}
+			}
+			if(rowCheck) bingoCount++;
+		}
+		return bingoCount;
 	}
 }
