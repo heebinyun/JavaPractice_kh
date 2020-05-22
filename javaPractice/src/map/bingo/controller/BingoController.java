@@ -72,6 +72,17 @@ public class BingoController {
 				}
 			}
 			if(rowCheck) bingoCount++;
+			
+			
+			// 세로 빙고 체크
+			colCheck = true;
+			for(int k=i; k<list.size(); k+=bingoSize) {
+				if(!list.get(k).equals("X")) {
+					colCheck = false;
+					break;
+				}
+			}
+			if(colCheck) bingoCount++;
 		}
 		return bingoCount;
 	}
