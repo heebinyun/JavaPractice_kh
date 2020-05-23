@@ -88,9 +88,15 @@ public class BingoController {
 			if(!list.get(i+ (bingoSize * i) ).equals("X")) {
 				diaCheck1 = false;
 			}
+			
+			// 우상 좌하(/) 대각선 빙고 체크
+			if(!list.get(bingoSize * i + (bingoSize -1 -i)).equals("X")) {
+				diaCheck2 = false;
+			}
 		}
 		
 		if(diaCheck1) bingoCount++;
+		if(diaCheck2) bingoCount++;
 		
 		return bingoCount;
 	}
