@@ -83,7 +83,15 @@ public class BingoController {
 				}
 			}
 			if(colCheck) bingoCount++;
+			
+			// 좌상 우하(\) 대각선 빙고 체크
+			if(!list.get(i+ (bingoSize * i) ).equals("X")) {
+				diaCheck1 = false;
+			}
 		}
+		
+		if(diaCheck1) bingoCount++;
+		
 		return bingoCount;
 	}
 }
