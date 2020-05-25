@@ -23,6 +23,7 @@ public class Run {
 		
 		
 		ArraySort as = new ArraySort();
-		as.method1();
+		//as.method1();
+		as.method2();
 	}
 }
