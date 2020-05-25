@@ -19,6 +19,10 @@ public class Run {
 		//ap.practice13();
 		//ap.practice14();
 		//ap.practice15();
-		ap.practice16();
+		//ap.practice16();
+		
+		
+		ArraySort as = new ArraySort();
+		as.method1();
 	}
 }
