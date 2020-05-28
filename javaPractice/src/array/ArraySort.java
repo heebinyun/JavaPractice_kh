@@ -84,4 +84,25 @@ public class ArraySort {
 			System.out.print(arr[i] + " ");
 		}
 	}
+	
+	public void method4() {
+		// 삽입 정렬 (내림차순)
+		
+		int[] arr = {2, 5, 4, 1, 3};
+		
+		// 1. 비교 주체를 정하는 for문
+		for(int i=1; i<arr.length; i++) {
+			// 2. 비교 대상을 정하는 for문
+			for(int j=0; j<i; j++) {
+				if(arr[i]>arr[j]) { // 내림차순은 오름차순과 비교연산자 방향 반대로
+					int temp = arr[i];
+					arr[i] = arr[j];
+					arr[j] = temp;
+				}
+			}
+		}
+		for(int i=0; i<arr.length; i++) {
+			System.out.print(arr[i]+" ");
+		}
+	}
 }

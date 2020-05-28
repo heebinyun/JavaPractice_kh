@@ -24,6 +24,8 @@ public class Run {
 		
 		ArraySort as = new ArraySort();
 		//as.method1();
-		as.method2();
+		//as.method2();
+		//as.method3();
+		as.method4();
 	}
 }
