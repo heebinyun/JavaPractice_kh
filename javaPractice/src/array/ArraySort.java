@@ -1,5 +1,7 @@
 package array;
 
+import java.util.Scanner;
+
 public class ArraySort {
 
 	// 5 4 1 2 3
@@ -103,6 +105,31 @@ public class ArraySort {
 		}
 		for(int i=0; i<arr.length; i++) {
 			System.out.print(arr[i]+" ");
+		}
+	}
+	
+	public void method5() {
+		// 정수 5개를 입력받아 배열에 저장 후 내림차순 정렬(삽입정렬)하여 출력
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int[] arr = new int[5]; // 배열 선언 및 할당
+		
+		for(int i=0; i<arr.length; i++) { 
+			System.out.print(i + 1 + " 번째 정수 입력 : ");
+			arr[i] = sc.nextInt(); // 배열에 저장
+		}
+		for(int i=1; i<arr.length; i++) {
+			for(int j=0; j<i; j++) {
+				if(arr[i] > arr[j]) { // 내림차순
+					int temp = arr[i];
+					arr[i] = arr[j];
+					arr[j] = temp;
+				}
+			}
+		}
+		for(int i=0; i<arr.length; i++) {
+			System.out.print(arr[i] + " ");
 		}
 	}
 }
