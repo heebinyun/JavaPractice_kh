@@ -132,4 +132,33 @@ public class ArraySort {
 			System.out.print(arr[i] + " ");
 		}
 	}
+	
+	// 버블 정렬(Bubble Sort)
+	// 인접한 두 개의 요소를 검사하여 정렬하는 방법
+	// 뒤에서부터 정렬이 되어지는 것이 특징
+	
+	// 장점 : 구현이 쉽다. 이미 정렬된 데이터를 다시 정렬할 때 가장 빠르다.
+	// 단점 : 다른 정렬에 비해서 정렬 속도가 느리다.
+	
+	public void method6() {
+		int arr[] = {2, 5, 4, 1, 3};
+		
+		int count = 0;
+		for(int i = arr.length - 1; i>0; i--) { // 1. 한 회차당 내부에 있는 for문이 반복할 횟수 지정
+			
+			for(int j=0; j<i; j++) { // 2. 지정된 회수만큼 반복하며 j번째 인덱스 요소와 j+1번째 인덱스 요스를 비교하여 정렬
+				
+				if(arr[j]>arr[j+1]) {
+					int temp = arr[j];
+						arr[j] = arr[j+1];
+						arr[j+1] = temp;
+						count++;
+				}
+			}
+		}
+		for(int i=0; i<arr.length; i++) {
+			System.out.print(arr[i]+ " ");
+		}
+		System.out.println("count : " + count);
+	}
 }

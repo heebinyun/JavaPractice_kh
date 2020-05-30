@@ -27,6 +27,7 @@ public class Run {
 		//as.method2();
 		//as.method3();
 		//as.method4();
-		as.method5();
+		//as.method5();
+		as.method6();
 	}
 }
