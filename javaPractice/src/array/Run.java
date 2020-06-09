@@ -28,6 +28,7 @@ public class Run {
 		//as.method3();
 		//as.method4();
 		//as.method5();
-		as.method6();
+		//as.method6();
+		as.method7();
 	}
 }
